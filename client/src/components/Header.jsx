@@ -8,10 +8,10 @@ export default function Header() {
     <Navbar className="border-b-2">
       <Link
         to="/"
-        className="self-center whitespace-nowrap text-sm font-semibold sm:text-xl dark:text-white"
+        className="self-center whitespace-nowrap text-sm font-semibold dark:text-white sm:text-xl"
       >
         <span className="rounded-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 px-2 py-1 text-white">
-          San's
+          San&apos;s
         </span>
         Blog
       </Link>
@@ -33,10 +33,14 @@ export default function Header() {
         <Link to="/login">
           <Button gradientDuoTone="purpleToBlue">Login</Button>
         </Link>
-        <Navbar.Collapse>
-          <Navbar.Link active></Navbar.Link>
-        </Navbar.Collapse>
       </div>
+      <Navbar.Collapse>
+        <Navbar.Link active>
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/projects">Projects</Link>
+        </Navbar.Link>
+      </Navbar.Collapse>
     </Navbar>
   );
 }
